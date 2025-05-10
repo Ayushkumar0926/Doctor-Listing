@@ -21,7 +21,7 @@ const Doctors = () => {
         if (value) params[key] = value;
       });
 
-      const res = await axios.get("http://localhost:5000/api/list-doctor-with-filter", { params });
+      const res = await axios.get("https://doctor-listing-easy.onrender.com", { params });
       setDoctors(res.data.doctors);
     } catch (err) {
       console.error("Error fetching doctors:", err);
